@@ -1,0 +1,72 @@
+.header {
+    height: 100px;
+    background-color: #403caa;
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 1.65rem;
+    margin-left: 20px;
+    font-family: Lobster;
+    
+  }
+  .nav {
+    margin-left: auto;
+    padding: 20px;
+  }
+  .cart {
+    background-color: #403caa;
+    border: none;
+  }
+  .cart-icon {
+    padding: 7px;
+    color: white;
+    font-size: 1.3rem;
+  }
+  .spanCart {
+    background-color: tomato;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width: 1788px) {
+    .logo {
+      font-size: 3rem;
+      margin-left: 50px;
+      cursor: pointer;
+    }
+    .cart-icon {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .spanCart {
+      padding: 3px 7px;
+    }
+    .nav {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .logo {
+      font-size: 3rem;
+      margin-left: 50px;
+      cursor: pointer;
+    }
+    .cart-icon {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .spanCart {
+      padding: 3px 7px;
+    }
+    .nav {
+      margin-right: 20px;
+    }
+  }
+  
