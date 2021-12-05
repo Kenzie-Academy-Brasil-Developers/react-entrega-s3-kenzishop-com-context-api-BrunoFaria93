@@ -54,8 +54,17 @@ const GlobalStyle = createGlobalStyle`
         font-size: 0.9rem;
         margin-top: 15px;
     }
-
-
+    .remove-button{
+      background-color: transparent;
+      border: none;
+      color: tomato;
+      cursor: pointer;
+  }
+  .preco-remove{
+      display: flex;
+      flex-direction: column;
+      
+  }
 
 @media screen and (min-width: 1788px) {
   .logo-login {

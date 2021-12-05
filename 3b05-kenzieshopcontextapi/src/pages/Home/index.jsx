@@ -13,7 +13,7 @@ import { useContext } from "react";
 function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { cart, addToCart, removeFromCart } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
 
   async function loadProducts() {
     const response = await api.get("/products/");

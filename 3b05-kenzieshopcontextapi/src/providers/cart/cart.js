@@ -19,7 +19,9 @@ const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (item) => {
-    const newCart = cart.filter((itemOnCart) => itemOnCart.name !== item.name);
+    console.log(cart)
+    const newCart = cart.filter((itemOnCart) => itemOnCart.title !== item.title);
+    
     setCart(newCart);
   };
 

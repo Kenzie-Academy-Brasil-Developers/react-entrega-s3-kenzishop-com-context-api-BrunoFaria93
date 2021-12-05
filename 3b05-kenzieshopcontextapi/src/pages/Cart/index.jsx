@@ -22,8 +22,9 @@ import Header from "../../components/Header";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../providers/AuthContext";
-import { useCart } from "../../providers/cart/cart"
-
+import { useCart } from "../../providers/cart/cart";
+import { CartContext, removeFromCart } from "../../providers/cart/cart";
+import { useContext } from "react";
 const useStyles = makeStyles({
   table: {
     maxWidth: 750,
@@ -48,6 +49,7 @@ const useStyles = makeStyles({
 
 function Cart() {
   const { cart } = useCart();
+  const { removeFromCart } = useContext(CartContext);
   const classes = useStyles();
   const history = useHistory();
   const subtotal = formatValue(
@@ -139,9 +141,12 @@ function Cart() {
                           alt={product.name}
                           className="cart-img"
                         />
+                        <div className='preco-remove'>
                         <span className="span-cart">
                           {product.priceFormatted}
-                        </span>
+                          </span>
+                          <button className='remove-button' onClick={() => removeFromCart(product)}>remover</button>
+                        </div>
                       </div>
                     </li>
                   ))}
@@ -154,9 +159,14 @@ function Cart() {
                   <TableCell>
                     <Image src={product.image} alt="Produto" />
                   </TableCell>
-                  <TableCell>{product.title}</TableCell>
+                  <TableCell>
+                    {product.title}
+            
+                  </TableCell>
+
                   <TableCell align="right">{product.priceFormatted}</TableCell>
                 </TableRow>;
+             
               })}
             </TableBody>
           </Table>
