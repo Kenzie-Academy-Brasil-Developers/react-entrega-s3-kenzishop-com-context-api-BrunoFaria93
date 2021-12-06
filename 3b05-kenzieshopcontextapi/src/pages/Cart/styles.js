@@ -17,7 +17,6 @@ export const Container404 = styled.div`
   }
 
   @media screen and (min-width: 1788px) {
-    }
   }
   @media screen and (min-width: 1300px) {
   }

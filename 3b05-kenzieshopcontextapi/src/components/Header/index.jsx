@@ -1,8 +1,7 @@
 import styles from "./styles.css";
 import { FiShoppingCart, FiLogOut } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../providers/AuthContext";
 import {useCart} from '../../providers/cart/cart'

@@ -48,8 +48,8 @@ const useStyles = makeStyles({
 });
 
 function Cart() {
-  const { cart } = useCart();
-  const { removeFromCart } = useContext(CartContext);
+  const {cart} = useCart();
+  const {removeFromCart} = useContext(CartContext);
   const classes = useStyles();
   const history = useHistory();
   const subtotal = formatValue(

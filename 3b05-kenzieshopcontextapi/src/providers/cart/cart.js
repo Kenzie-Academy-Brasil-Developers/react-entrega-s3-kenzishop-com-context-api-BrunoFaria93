@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from 'react'
 
 export const CartContext = createContext([]);
 
@@ -19,9 +19,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (item) => {
-    console.log(cart)
     const newCart = cart.filter((itemOnCart) => itemOnCart.title !== item.title);
-    
     setCart(newCart);
   };
 
